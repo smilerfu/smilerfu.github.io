@@ -9,13 +9,13 @@
   </url>
   
   <url>
-    <loc>https://smilerfu.github.io/</loc>
+    <loc>https://smilerfu.github.io/tags/</loc>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://smilerfu.github.io/tags/</loc>
+    <loc>https://smilerfu.github.io/</loc>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
