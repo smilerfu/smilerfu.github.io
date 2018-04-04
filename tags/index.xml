@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on smilerfu&#39;s blogs</title>
-    <link>https://smilerfu.github.io/tags/</link>
+    <link>http://smilerfu.github.io/tags/</link>
     <description>Recent content in Tags on smilerfu&#39;s blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	<atom:link href="https://smilerfu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://smilerfu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

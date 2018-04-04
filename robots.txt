@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://smilerfu.github.io/sitemap.xml
+Sitemap: http://smilerfu.github.io/sitemap.xml
