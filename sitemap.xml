@@ -3,6 +3,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://smilerfu.github.io/post/first/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://smilerfu.github.io/test/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -10,6 +16,12 @@
   
   <url>
     <loc>https://smilerfu.github.io/categories/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://smilerfu.github.io/post/</loc>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
