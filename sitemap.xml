@@ -3,13 +3,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://smilerfu.github.io/post/first/</loc>
+    <loc>http://smilerfu.github.io/post/dokuwiki_%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2018-04-05T09:39:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://smilerfu.github.io/test/</loc>
+    <loc>http://smilerfu.github.io/post/dokuwiki_%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2018-04-05T01:39:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -21,7 +23,15 @@
   </url>
   
   <url>
+    <loc>http://smilerfu.github.io/categories/dokuwiki/</loc>
+    <lastmod>2018-04-05T09:39:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://smilerfu.github.io/post/</loc>
+    <lastmod>2018-04-05T09:39:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -34,6 +44,7 @@
   
   <url>
     <loc>http://smilerfu.github.io/</loc>
+    <lastmod>2018-04-05T09:39:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

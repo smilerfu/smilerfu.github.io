@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on smilerfu&#39;s blogs</title>
-    <link>http://smilerfu.github.io/post/</link>
-    <description>Recent content in Posts on smilerfu&#39;s blogs</description>
+    <title>Dokuwiki on smilerfu&#39;s blogs</title>
+    <link>http://smilerfu.github.io/categories/dokuwiki/</link>
+    <description>Recent content in Dokuwiki on smilerfu&#39;s blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_CN</language>
     <lastBuildDate>Thu, 05 Apr 2018 09:39:00 +0800</lastBuildDate>
     
-	<atom:link href="http://smilerfu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://smilerfu.github.io/categories/dokuwiki/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

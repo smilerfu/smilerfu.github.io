@@ -10,5 +10,14 @@
 	<atom:link href="http://smilerfu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Dokuwiki</title>
+      <link>http://smilerfu.github.io/categories/dokuwiki/</link>
+      <pubDate>Thu, 05 Apr 2018 09:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/categories/dokuwiki/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

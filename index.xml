@@ -6,35 +6,133 @@
     <description>Recent content on smilerfu&#39;s blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_CN</language>
+    <lastBuildDate>Thu, 05 Apr 2018 09:39:00 +0800</lastBuildDate>
     
         <atom:link href="http://smilerfu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title></title>
-      <link>http://smilerfu.github.io/post/first/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>DokuWiki环境搭建</title>
+      <link>http://smilerfu.github.io/post/dokuwiki_%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Thu, 05 Apr 2018 09:39:00 +0800</pubDate>
       
-      <guid>http://smilerfu.github.io/post/first/</guid>
+      <guid>http://smilerfu.github.io/post/dokuwiki_%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</guid>
       
-        <description>
+        <description>&lt;p&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;test&#34;&gt;Test&lt;/h2&gt;
-</description>
+&lt;h5 id=&#34;centos-6-6-x64环境下搭建&#34;&gt;CentOS 6.6 x64环境下搭建&lt;/h5&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;下载dokuwiki压缩包: &lt;a href=&#34;https://download.dokuwiki.org/&#34;&gt;dokuwiki-c5525093cf2c4f47e2e5d2439fe13964.tgz&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;切换到目录:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;cd /var/www/html&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;解压 dokuwiki-c5525093cf2c4f47e2e5d2439fe13964.tgz&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;tar -zxvf dokuwiki-c5525093cf2c4f47e2e5d2439fe13964.tgz&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;解压完毕后，&lt;code&gt;在/var/www/html&lt;/code&gt; 下会出现 &lt;code&gt;dokuwiki&lt;/code&gt; 目录&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;更改Apache根路径&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;chown -R apache:root /var/www/html/dokuwiki&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;更改目录访问权限&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;chmod -R 664 /var/www/html/dowuwiki
+find /var/www/html/dokuwiki/ -type d -exec chmod 775 {} \;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;安装php，不然打开.php网页时，只会显示php代码，而不是网页页面&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;yum install php&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;启动apache&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;service httpd start&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;访问&lt;a href=&#34;http://127.0.0.1/dokuwiki/doku.php&#34;&gt;http://127.0.0.1/dokuwiki/doku.php&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://smilerfu.github.io/images/dokuwiki/dokuwiki_install_1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;局域网通过IP进行访问需先关闭防火墙&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;service iptables stop&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;此时可通过&lt;a href=&#34;http://192.168.x.x/dokuwiki/doku.php进行访问&#34;&gt;http://192.168.x.x/dokuwiki/doku.php进行访问&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;访问&lt;a href=&#34;http://127.0.0.1/dokuwiki/install.php&#34;&gt;http://127.0.0.1/dokuwiki/install.php&lt;/a&gt;可进行权限号账号、密码等设置
+&lt;img src=&#34;http://smilerfu.github.io/images/dokuwiki/dokuwiki_install_2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;install.php配置完毕后的界面如下:&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://smilerfu.github.io/images/dokuwiki/dokuwiki_install_3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如果没有出现上界面，而是和第(9)步骤未配置前一样，说明有信息未填写。配置没有生效。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;注意:设置完之后一般将此install.php文件删除，避免遭他人修改&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;【附录】&lt;/p&gt;
+
+&lt;p&gt;官网: &lt;a href=&#34;https://www.dokuwiki.org/dokuwiki&#34;&gt;https://www.dokuwiki.org/dokuwiki&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;下载地址: &lt;a href=&#34;https://download.dokuwiki.org/&#34;&gt;https://download.dokuwiki.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;官网插件下载地址&#34;&gt;官网插件下载地址&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;下载地址:&lt;a href=&#34;https://www.dokuwiki.org/plugins&#34;&gt;https://www.dokuwiki.org/plugins&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&#34;1-wrap-plugin-插件&#34;&gt;1.Wrap Plugin 插件&lt;/h5&gt;
+
+&lt;p&gt;1.下载地址: &lt;a href=&#34;https://www.dokuwiki.org/plugin:wrap&#34;&gt;https://www.dokuwiki.org/plugin:wrap&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;2.下载后得到 &lt;code&gt;dokuwiki_plugin_wrap-stable.zip&lt;/code&gt; 文件&lt;/p&gt;
+
+&lt;p&gt;3.将其解压到 &lt;code&gt;/var/www/html/dokuwiki/lib/plugins&lt;/code&gt; 底下&lt;/p&gt;
+
+&lt;p&gt;4.将文件夹名 &lt;code&gt;dokuwiki_plugin_wrap-stable&lt;/code&gt; 重命名为 &lt;code&gt;warp&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;5.有需要的话重启下网络服务&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;service network restart
+&lt;/code&gt;&lt;/pre&gt;</description>
       
     </item>
     
     <item>
-      <title></title>
-      <link>http://smilerfu.github.io/test/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>DokuWiki插件安装</title>
+      <link>http://smilerfu.github.io/post/dokuwiki_%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Thu, 05 Apr 2018 01:39:00 +0800</pubDate>
       
-      <guid>http://smilerfu.github.io/test/</guid>
+      <guid>http://smilerfu.github.io/post/dokuwiki_%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/</guid>
       
-        <description>
+        <description>&lt;p&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;test&#34;&gt;Test&lt;/h2&gt;
-</description>
+&lt;h4 id=&#34;官网插件下载地址&#34;&gt;官网插件下载地址&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;下载地址:&lt;a href=&#34;https://www.dokuwiki.org/plugins&#34;&gt;https://www.dokuwiki.org/plugins&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&#34;wrap-plugin-插件&#34;&gt;Wrap Plugin 插件&lt;/h5&gt;
+
+&lt;p&gt;1.下载地址: &lt;a href=&#34;https://www.dokuwiki.org/plugin:wrap&#34;&gt;https://www.dokuwiki.org/plugin:wrap&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;2.下载后得到 &lt;code&gt;dokuwiki_plugin_wrap-stable.zip&lt;/code&gt; 文件&lt;/p&gt;
+
+&lt;p&gt;3.将其解压到 &lt;code&gt;/var/www/html/dokuwiki/lib/plugins&lt;/code&gt; 底下&lt;/p&gt;
+
+&lt;p&gt;4.将文件夹名 &lt;code&gt;dokuwiki_plugin_wrap-stable&lt;/code&gt; 重命名为 &lt;code&gt;warp&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;5.有需要的话重启下网络服务&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;service network restart
+&lt;/code&gt;&lt;/pre&gt;</description>
       
     </item>
     
