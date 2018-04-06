@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Lua学习 - smilerfu&#39;s blogs</title>
+  <title>GitHub的SSH配置 - smilerfu&#39;s blogs</title>
   <link rel="alternate" hreflang="zh_CN" href="http://smilerfu.github.io/" />
 
 <meta name="renderer" content="webkit" />
@@ -39,7 +39,7 @@
 <meta name="generator" content="Hugo 0.38" />
 
 
-<link rel="canonical" href="http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_%E7%B1%BB/" />
+<link rel="canonical" href="http://smilerfu.github.io/post/github_ssh%E9%85%8D%E7%BD%AE/" />
 
 
 
@@ -59,10 +59,10 @@
 
 
 
-<meta property="og:title" content="Lua学习" />
+<meta property="og:title" content="GitHub的SSH配置" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_%E7%B1%BB/" />
+<meta property="og:url" content="http://smilerfu.github.io/post/github_ssh%E9%85%8D%E7%BD%AE/" />
 
 
 
@@ -80,19 +80,19 @@
 
 
 
-<meta itemprop="name" content="Lua学习">
+<meta itemprop="name" content="GitHub的SSH配置">
 <meta itemprop="description" content="">
 
 
 <meta itemprop="datePublished" content="2018-04-05T01:39:00&#43;08:00" />
 <meta itemprop="dateModified" content="2018-04-05T01:39:00&#43;08:00" />
-<meta itemprop="wordCount" content="0">
+<meta itemprop="wordCount" content="1083">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Lua学习"/>
+<meta name="twitter:title" content="GitHub的SSH配置"/>
 <meta name="twitter:description" content=""/>
 
 <!--[if lte IE 9]>
@@ -168,17 +168,17 @@
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title">Lua学习</h1>
+      <h1 class="post-title">GitHub的SSH配置</h1>
       
       <div class="post-meta">
         <span class="post-time"> 2018-04-05 </span>
         <div class="post-category">
             
-              <a href="/categories/lua/"> Lua </a>
+              <a href="/categories/git/"> Git </a>
             
           </div>
-        <span class="more-meta"> 0 words </span>
-        <span class="more-meta"> 0 min read </span>
+        <span class="more-meta"> 1083 words </span>
+        <span class="more-meta"> 3 min read </span>
       </div>
     </header>
 
@@ -188,6 +188,148 @@
     
     <div class="post-content">
       <p></p>
+
+<h3 id="克隆仓库">克隆仓库</h3>
+
+<p>我们在github上克隆仓库的时候，一般使用ssh或者https这2种方式。
+<img src="/images/git/git_clone_ssh_https.png" alt="" /></p>
+
+<p>https在git push的时候每次都要输入账号和密码。因此比较繁琐。</p>
+
+<p>所以我们一般采用ssh方式来克隆远程仓库。</p>
+
+<p>不过采用ssh方式时，我们需要先配置下密钥。</p>
+
+<h3 id="生成ssh秘钥">生成ssh秘钥</h3>
+
+<p>生成ssh秘钥一般有两种方式，一种使用git生成，另一种则使用TortoiseGit自带的PuTTYgen生成。</p>
+
+<h5 id="方式一-使用git生成">方式一、 使用git生成</h5>
+
+<ol>
+<li>右键选择 <code>Git Bash Here</code> 可打开git的控制台窗口</li>
+
+<li><p>输入以下命令生成秘钥</p>
+
+<p><code>ssh-keygen -t rsa -C &quot;example@email.com&quot;</code></p>
+
+<p>其中:</p>
+
+<ul>
+<li><code>example@email.com</code> - 你你自己的github邮箱地址</li>
+</ul>
+
+<p>按回车后，会有一些输入项让你配置，默然直接回车即可。</p>
+
+<p>最后控制台的输出如下:</p>
+
+<pre><code>Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/UserName/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/UserName/.ssh/id_rsa.
+Your public key has been saved in /c/Users/UserName/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:xxxxxxxxxxxxxxxxxxx example@email.com
+The key's randomart image is:
++---[RSA 2048]----+
+|xxxxxxxxxxxxxxxxxxx|
++----[SHA256]-----+
+</code></pre>
+
+<p>其中:</p>
+
+<ul>
+<li><code>UserName</code> - 你的计算机用户名</li>
+<li><code>example@email.com</code> - 你输入的github邮箱地址</li>
+<li><code>xxxxxxxxxxxxxxxxxxx</code> - 每个人都不同
+<br /></li>
+</ul>
+
+<p>从而我们就得到了一对公钥和私钥。</p>
+
+<p>公钥存放在<code>c/Users/UserName/.ssh/id_rsa.pub</code>中</p>
+
+<p>私钥存放在<code>c/Users/UserName/.ssh/id_rsa</code>中</p></li>
+</ol>
+
+<h5 id="方式二-使用tortoisegit自带的puttygen生成">方式二、使用TortoiseGit自带的PuTTYgen生成</h5>
+
+<h3 id="github配置ssh">github配置ssh</h3>
+
+<ol>
+<li><p>打开github配置界面</p>
+
+<p><img src="/images/git/github_settings_menu.png" alt="" /></p></li>
+
+<li><p>选择SSH and GPG keys</p>
+
+<p><img src="/images/git/github_settings_ssh.png" alt="" /></p></li>
+
+<li><p>选择New SSH key</p>
+
+<p><img src="/images/git/github_settings_ssh_new.png" alt="" /></p></li>
+
+<li><p>输入新的SSH Keys
+<img src="/images/git/github_settings_ssh_new_add.png" alt="" />
+其中:</p>
+
+<ul>
+<li><code>Title</code> - 用于区分不同秘钥，可自行定义</li>
+
+<li><p><code>Key</code> - 即上面生成的公钥文件<code>id_rsa.pub</code>里面的文本内容</p>
+
+<p>可通过以下命令获取:</p>
+
+<pre><code>    cd ~/.ssh
+    cat id_rsa.pub
+</code></pre>
+
+<p>把控制台输出的文本拷贝到输入框中。</p></li>
+</ul></li>
+
+<li><p>点击 Add SSH key 按钮就配置成功了</p></li>
+</ol>
+
+<h3 id="配置tortoisegit">配置TortoiseGit</h3>
+
+<p>方式1使用git生成的秘钥是无法直接在TortoiseGit使用的。我们还要为TortoiseGit进行一些设置。
+设置有2种方式。</p>
+
+<h5 id="方式一-将tortoisegit的ssh-client设置为git的ssh-exe">方式一、将TortoiseGit的SSH client设置为git的ssh.exe</h5>
+
+<ol>
+<li>打开TortoiseGit的设置界面，选择<code>Network</code>选项</li>
+<li>将SSH client设置为git安装目录下<code>usr\bin\ssh.exe</code>选项</li>
+</ol>
+
+<p><img src="/images/git/git_settings_network.png" alt="" /></p>
+
+<h5 id="方式二-将上面git产生的私钥转换成tortoisegit使用的ppk秘钥">方式二. 将上面git产生的私钥转换成TortoiseGit使用的ppk秘钥</h5>
+
+<ol>
+<li>运行<code>puttygen.exe</code>(位于TortoiseGit安装目录下的bin目录)
+<img src="/images/git/git_settings_puttygen_main.png" alt="" /></li>
+<li>选择<code>Load</code>，加载方式一使用git生成的id_rsa私钥
+<img src="/images/git/git_settings_puttygen_load.png" alt="" /></li>
+<li>选择<code>Save private key</code>,保存为ppk格式文件。</li>
+<li>运行<code>pageant.exe</code>位于TortoiseGit安装目录下的bin目录)</li>
+<li>选择<code>Add Key</code>，选择刚才保存的 ppk 文件即可</li>
+</ol>
+
+<h3 id="修改仓库的访问方式-ssh或者https">修改仓库的访问方式(ssh或者https)</h3>
+
+<h5 id="查看当前的remote方式">查看当前的remote方式</h5>
+
+<p><code>git remote -v</code></p>
+
+<h5 id="将ssh方式修改为https方式">将ssh方式修改为https方式</h5>
+
+<p><code>git remote set-url origin https://github.com/yourname/example.git</code></p>
+
+<h5 id="将https方式修改为ssh方式">将https方式修改为ssh方式</h5>
+
+<p><code>git remote set-url origin git@github.com:yourname/example.git</code></p>
     </div>
 
     
@@ -202,12 +344,17 @@
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/github_ssh%E9%85%8D%E7%BD%AE/">
+          <a class="prev" href="/post/dokuwiki_%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">GitHub的SSH配置</span>
+            <span class="prev-text nav-default">DokuWiki插件安装</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         
+          <a class="next" href="/post/lua_%E5%AD%A6%E4%B9%A0_%E7%B1%BB/">
+            <span class="next-text nav-default">Lua学习</span>
+            <span class="prev-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
       </nav>
     </footer>
     
