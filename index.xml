@@ -285,7 +285,16 @@ The key&#39;s randomart image is:
 
 &lt;h5 id=&#34;将https方式修改为ssh方式&#34;&gt;将https方式修改为ssh方式&lt;/h5&gt;
 
-&lt;p&gt;&lt;code&gt;git remote set-url origin git@github.com:yourname/example.git&lt;/code&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;code&gt;git remote set-url origin git@github.com:yourname/example.git&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;问题汇总&#34;&gt;问题汇总&lt;/h3&gt;
+
+&lt;h5 id=&#34;1-tortoisegit-disconnected-no-supported-authentication报错&#34;&gt;1. TortoiseGit disconnected no supported authentication报错&lt;/h5&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://smilerfu.github.io/images/git/git_error_disconnect_no_suported_authentication.png&#34; alt=&#34;&#34; /&gt;
+该问题即没有配置好TortoiseGit，按照上面配置TortoiseGit进行配置即可&lt;/p&gt;
+
+&lt;p&gt;git remote set-url origin git@github.com:smilerfu/smilerfu.github.io.git&lt;/p&gt;</description>
       
     </item>
     
