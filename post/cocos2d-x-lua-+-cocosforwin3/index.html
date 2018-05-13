@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Cocos2d-x Lua &#43; CocosForWin3.10 &#43; BabelLua项目设置 - smilerfu&#39;s blogs</title>
+  <link rel="alternate" hreflang="zh_CN" href="http://smilerfu.github.io/" />
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+
+<meta name="author" content="smilerfu" />
+  <meta name="description" content="
+" />
+<meta name="keywords" content="Cocos2dX, Babelua" />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.38" />
+
+
+<link rel="canonical" href="http://smilerfu.github.io/post/cocos2d-x-lua-&#43;-cocosforwin3/" />
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon.ico" />
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+<link href="/dist/jane.min.css?v=2.7.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Cocos2d-x Lua &#43; CocosForWin3.10 &#43; BabelLua项目设置" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://smilerfu.github.io/post/cocos2d-x-lua-&#43;-cocosforwin3/" />
+
+
+
+<meta property="article:published_time" content="2018-05-13T14:59:45&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-05-13T14:59:45&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Cocos2d-x Lua &#43; CocosForWin3.10 &#43; BabelLua项目设置">
+<meta itemprop="description" content="">
+
+
+<meta itemprop="datePublished" content="2018-05-13T14:59:45&#43;08:00" />
+<meta itemprop="dateModified" content="2018-05-13T14:59:45&#43;08:00" />
+<meta itemprop="wordCount" content="763">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Cocos2d-x Lua &#43; CocosForWin3.10 &#43; BabelLua项目设置"/>
+<meta name="twitter:description" content=""/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">smilerfu&#39;s blogs</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">目录</li>
+      </a>
+  </ul>
+</nav>
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">smilerfu&#39;s blogs</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        
+        <a class="menu-item-link" href="/">主页</a>
+        
+      </li><li class="menu-item">
+        
+        <a class="menu-item-link" href="/post/">文章</a>
+        
+      </li><li class="menu-item">
+        
+        <a class="menu-item-link" href="/tags/">标签</a>
+        
+      </li><li class="menu-item">
+        
+        <a class="menu-item-link" href="/categories/">目录</a>
+        
+      </li>
+  </ul>
+</nav>
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">Cocos2d-x Lua &#43; CocosForWin3.10 &#43; BabelLua项目设置</h1>
+      
+      <div class="post-meta">
+        <span class="post-time"> 2018-05-13 </span>
+        <div class="post-category">
+            
+              <a href="/categories/cocos2dx/"> Cocos2dX </a>
+            
+              <a href="/categories/babelua/"> Babelua </a>
+            
+          </div>
+        <span class="more-meta"> 763 words </span>
+        <span class="more-meta"> 2 min read </span>
+      </div>
+    </header>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p></p>
+
+<h4 id="项目环境">项目环境</h4>
+
+<ul>
+<li>cocos2d-x-3.16</li>
+<li>VS2013</li>
+<li>CocosForWin-v3.10.exe</li>
+<li>BabeLua+For+2013+V3.2.2.0.vsix</li>
+</ul>
+
+<h4 id="创建项目">创建项目</h4>
+
+<h6 id="新建cocos2d-x-lua项目">新建Cocos2d-x lua项目</h6>
+
+<ul>
+<li><p>切换到<code>cocos2d-x-3.16\tools\cocos2d-console\bin</code>目录，执行:</p>
+
+<pre><code>cocos new MyLuaGame -l lua -p com.xxx.xxx -d F:\cocosproject
+</code></pre></li>
+
+<li><p>编译项目</p></li>
+</ul>
+
+<h6 id="新建-cocostudio项目">新建 Cocostudio项目</h6>
+
+<ul>
+<li>打开Cocostudio，选择【文件】，选择【新建项目】
+<img src="/images/cocos2dx/cocostudio_new_project.png" alt="" /></li>
+<li>将<code>F:\cocosproject\MyLuaGame\CocosProject\cocosstudio</code>拷贝到项目根目录，即<code>F:\cocosproject\MyLuaGame</code></li>
+<li>将<code>CocosProject.ccs</code>、<code>CocosProject.cfg</code>和<code>CocosProject.udf</code>也拷贝到项目根目录，即<code>F:\cocosproject\MyLuaGame</code></li>
+<li>拷贝完毕后，CocosProject这个目录就没有什么用，可以删掉了</li>
+<li>修改<code>CocosProject.cfg</code>文件中的<code>CreateFrameworkVersion Value=&quot;cocos2d-x-3.16&quot;</code>和<code>CurrentFrameworkVersion Value=&quot;cocos2d-x-3.16</code>，目前不清楚此修改是否有作用</li>
+<li>使用Cocostudio打开项目，选择<code>F:\cocosproject\MyLuaGame\CocosProject.ccs</code>打开即可。</li>
+</ul>
+
+<h6 id="新加-lua项目">新加 lua项目</h6>
+
+<ul>
+<li>右键解决方案，添加并新建Lua项目
+<img src="/images/cocos2dx/solution_add_lua_project.png" alt="" /></li>
+<li>Lua项目路径设置为项目MyLuaGame的根路径
+<img src="/images/cocos2dx/lua_project_new.png" alt="" /></li>
+<li>右键Lua项目，选择添加现有目录，将F:\cocosproject\MyLuaGame\src目录添加入
+<img src="/images/cocos2dx/lua_project_add_existing_folder.png" alt="" /></li>
+<li>设置LuaProject为启动项目</li>
+<li>此时添加断点发现并不能中断，修改AppDelegate.cpp文件，添加<code>LuaStack* stack = engine-&gt;getLuaStack();stack-&gt;addSearchPath(&quot;src/&quot;);</code>
+<img src="/images/cocos2dx/lua_project_debug_appdelegate.png" alt="" /></li>
+<li>设置MyLuaGame为启动项目，重新编译运行后，再设置LuaProject为启动项目，此时可以进入断点</li>
+</ul>
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/%E7%BD%91%E7%BB%9C_%E5%AD%A6%E4%B9%A0_%E7%AC%94%E8%AE%B0/">
+            <span class="next-text nav-default">网络 学习笔记</span>
+            <span class="prev-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+    
+  </article>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" rel="me" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://en.xianmin.org/hugo-theme-jane/" rel="me" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://en.xianmin.org/hugo-theme-jane/" rel="me" class="iconfont icon-goodreads" title="goodreads"></a>
+  <a href="http://smilerfu.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">smilerfu</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+<script type="text/javascript" src="/dist/jane.min.js?v=2.7.0"></script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Python学习-Python扩展 - smilerfu&#39;s blogs</title>
+  <link rel="alternate" hreflang="zh_CN" href="http://smilerfu.github.io/" />
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+
+<meta name="author" content="smilerfu" />
+  <meta name="description" content="" />
+
+  <meta name="keywords" content="Hugo, theme, jane" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.38" />
+
+
+<link rel="canonical" href="http://smilerfu.github.io/post/python_%E5%AD%A6%E4%B9%A0_c%E4%BA%A4%E4%BA%92/" />
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon.ico" />
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+<link href="/dist/jane.min.css?v=2.7.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Python学习-Python扩展" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://smilerfu.github.io/post/python_%E5%AD%A6%E4%B9%A0_c%E4%BA%A4%E4%BA%92/" />
+
+
+
+<meta property="article:published_time" content="2018-04-05T01:39:00&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-04-05T01:39:00&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Python学习-Python扩展">
+<meta itemprop="description" content="">
+
+
+<meta itemprop="datePublished" content="2018-04-05T01:39:00&#43;08:00" />
+<meta itemprop="dateModified" content="2018-04-05T01:39:00&#43;08:00" />
+<meta itemprop="wordCount" content="398">
+
+
+
+<meta itemprop="keywords" content="Python," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python学习-Python扩展"/>
+<meta name="twitter:description" content=""/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">smilerfu&#39;s blogs</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">目录</li>
+      </a>
+  </ul>
+</nav>
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">smilerfu&#39;s blogs</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        
+        <a class="menu-item-link" href="/">主页</a>
+        
+      </li><li class="menu-item">
+        
+        <a class="menu-item-link" href="/post/">文章</a>
+        
+      </li><li class="menu-item">
+        
+        <a class="menu-item-link" href="/tags/">标签</a>
+        
+      </li><li class="menu-item">
+        
+        <a class="menu-item-link" href="/categories/">目录</a>
+        
+      </li>
+  </ul>
+</nav>
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">Python学习-Python扩展</h1>
+      
+      <div class="post-meta">
+        <span class="post-time"> 2018-04-05 </span>
+        <div class="post-category">
+            
+              <a href="/categories/python/"> Python </a>
+            
+          </div>
+        <span class="more-meta"> 398 words </span>
+        <span class="more-meta"> 1 min read </span>
+      </div>
+    </header>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p>
+【注】: 以下环境采用Python3.6.2版本</p>
+
+<h3 id="初始化python虚拟机">初始化Python虚拟机</h3>
+
+<pre><code>#include &quot;stdafx.h&quot;
+#include &lt;Python.h&gt;
+int main()
+{
+    // 初始化Python解释器
+    Py_Initialize();
+    if (!Py_IsInitialized())
+    {
+        PyErr_Print();
+        system(&quot;pause&quot;);
+        exit(-1);
+    }
+
+    // 将字符串作为代码执行，类似exec
+    PyRun_SimpleString(&quot;import sys&quot;);
+    PyRun_SimpleString(&quot;print(dir(sys))&quot;);
+
+    // 报错堆栈打印
+    PyErr_Print();
+
+    // 结束Python解释器
+    Py_Finalize();
+}
+</code></pre>
+
+<h3 id="几个常用接口">几个常用接口</h3>
+
+<h5 id="1-int-pyrun-simplestring-const-char-command">1.int PyRun_SimpleString(const char *command)</h5>
+
+<p>将字符串作为代码执行，类似<code>exec</code></p>
+
+<p>返回值: 执行成功返回0，如果有异常返回-1</p>
+
+<pre><code>PyRun_SimpleString(&quot;import sys&quot;);
+PyRun_SimpleString(&quot;print(dir(sys))&quot;);
+</code></pre>
+
+<h5 id="2-pyobject-pyimport-importmodule-const-char-name">2. PyObject* PyImport_ImportModule(const char *name)</h5>
+
+<p>导入一个模块，类似<code>import</code></p>
+
+<p>返回值: PyObject(Return value: New reference)</p>
+
+<pre><code>PyObject* mainModule = PyImport_ImportModule(&quot;main&quot;);
+if (!mainModule)
+{
+    PyErr_Print();
+}
+</code></pre>
+
+<h5 id="3-pyobject-pymodule-getdict-pyobject-module">3. PyObject* PyModule_GetDict(PyObject *module)</h5>
+
+<p>获取模块属性字典</p>
+
+<p>PyObject(Return value: Borrowed reference)</p>
+
+<pre><code>PyObject* mainDict = PyModule_GetDict(mainModule);
+if (!mainDict)
+{
+    PyErr_Print();
+}
+</code></pre>
+
+<h5 id="4-pyobject-pydict-getitemstring-pyobject-p-const-char-key">4. PyObject* PyDict_GetItemString(PyObject *p, const char *key)</h5>
+
+<p>获取模块属性</p>
+
+<p>返回值: PyObject(Return value: Borrowed reference)</p>
+
+<pre><code>PyObject* mainStartFunc = PyDict_GetItemString(mainDict, &quot;Start&quot;);
+if (!mainStartFunc || !PyCallable_Check(mainStartFunc))
+{
+    PyErr_Print();
+}
+</code></pre>
+
+<h5 id="5-pyobject-pyobject-callfunction-pyobject-callable-const-char-format">5. PyObject* PyObject_CallFunction(PyObject *callable, const char *format, &hellip;)</h5>
+
+<p>调用一个函数</p>
+
+<p>返回值: PyObject(Return value: New reference)</p>
+
+<pre><code>PyObject* returnValue = PyObject_CallFunction(mainStartFunc, NULL);
+</code></pre>
+
+<h5 id="6-void-py-decref-pyobject-o-和-void-py-xdecref-pyobject-o">6. void Py_DECREF(PyObject *o) 和 void Py_XDECREF(PyObject *o)</h5>
+
+<p>减引用计数</p>
+
+<p>两个函数区别是:</p>
+
+<ul>
+<li>Py_DECREF传入参数o不能为NULL</li>
+<li>Py_XDECREF允许o为NULL</li>
+</ul>
+
+<pre><code>Py_DECREF(returnValue);  // 或者: Py_XDECREF(returnValue); 
+</code></pre>
+
+<h3 id="new-reference-和-borrowed-reference">New reference 和 Borrowed reference</h3>
+
+<p>New reference 会增加引用计数，因此在释放时需要调用<code>Py_DECREF</code>或者<code>Py_XDECREF</code>进行减引用计数</p>
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/python/">Python</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/linux_%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81ip/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Linux 设置静态IP</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+      </nav>
+    </footer>
+    
+  </article>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" rel="me" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://en.xianmin.org/hugo-theme-jane/" rel="me" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://en.xianmin.org/hugo-theme-jane/" rel="me" class="iconfont icon-goodreads" title="goodreads"></a>
+  <a href="http://smilerfu.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">smilerfu</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+<script type="text/javascript" src="/dist/jane.min.js?v=2.7.0"></script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cocos2dx on smilerfu&#39;s blogs</title>
+    <link>http://smilerfu.github.io/categories/cocos2dx/</link>
+    <description>Recent content in Cocos2dx on smilerfu&#39;s blogs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh_CN</language>
+    <lastBuildDate>Sun, 13 May 2018 14:59:45 +0800</lastBuildDate>
+    
+	<atom:link href="http://smilerfu.github.io/categories/cocos2dx/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cocos2d-x Lua &#43; CocosForWin3.10 &#43; BabelLua项目设置</title>
+      <link>http://smilerfu.github.io/post/cocos2d-x-lua-&#43;-cocosforwin3/</link>
+      <pubDate>Sun, 13 May 2018 14:59:45 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/post/cocos2d-x-lua-&#43;-cocosforwin3/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

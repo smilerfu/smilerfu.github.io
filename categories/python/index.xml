@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on smilerfu&#39;s blogs</title>
+    <link>http://smilerfu.github.io/categories/python/</link>
+    <description>Recent content in Python on smilerfu&#39;s blogs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh_CN</language>
+    <lastBuildDate>Thu, 05 Apr 2018 01:39:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://smilerfu.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python学习-Python扩展</title>
+      <link>http://smilerfu.github.io/post/python_%E5%AD%A6%E4%B9%A0_c%E4%BA%A4%E4%BA%92/</link>
+      <pubDate>Thu, 05 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/post/python_%E5%AD%A6%E4%B9%A0_c%E4%BA%A4%E4%BA%92/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

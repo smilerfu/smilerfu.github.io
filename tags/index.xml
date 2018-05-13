@@ -6,9 +6,28 @@
     <description>Recent content in Tags on smilerfu&#39;s blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_CN</language>
+    <lastBuildDate>Thu, 05 Apr 2018 01:39:00 +0800</lastBuildDate>
     
 	<atom:link href="http://smilerfu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux</title>
+      <link>http://smilerfu.github.io/tags/linux/</link>
+      <pubDate>Thu, 05 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>http://smilerfu.github.io/tags/python/</link>
+      <pubDate>Thu, 05 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/tags/python/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

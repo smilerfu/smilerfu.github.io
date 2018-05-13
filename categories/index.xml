@@ -6,9 +6,46 @@
     <description>Recent content in Categories on smilerfu&#39;s blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_CN</language>
+    <lastBuildDate>Sun, 13 May 2018 14:59:45 +0800</lastBuildDate>
     
 	<atom:link href="http://smilerfu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Babelua</title>
+      <link>http://smilerfu.github.io/categories/babelua/</link>
+      <pubDate>Sun, 13 May 2018 14:59:45 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/categories/babelua/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C</title>
+      <link>http://smilerfu.github.io/categories/c/</link>
+      <pubDate>Mon, 16 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/categories/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>http://smilerfu.github.io/categories/c&#43;&#43;/</link>
+      <pubDate>Mon, 16 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/categories/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cocos2dx</title>
+      <link>http://smilerfu.github.io/categories/cocos2dx/</link>
+      <pubDate>Sun, 13 May 2018 14:59:45 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/categories/cocos2dx/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Dokuwiki</title>
@@ -29,11 +66,56 @@
     </item>
     
     <item>
-      <title>Lua</title>
-      <link>http://smilerfu.github.io/categories/lua/</link>
+      <title>Idea</title>
+      <link>http://smilerfu.github.io/categories/idea/</link>
+      <pubDate>Thu, 12 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/categories/idea/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jave</title>
+      <link>http://smilerfu.github.io/categories/jave/</link>
+      <pubDate>Thu, 12 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/categories/jave/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>http://smilerfu.github.io/categories/linux/</link>
       <pubDate>Thu, 05 Apr 2018 01:39:00 +0800</pubDate>
       
+      <guid>http://smilerfu.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lua</title>
+      <link>http://smilerfu.github.io/categories/lua/</link>
+      <pubDate>Sun, 15 Apr 2018 01:39:00 +0800</pubDate>
+      
       <guid>http://smilerfu.github.io/categories/lua/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>http://smilerfu.github.io/categories/python/</link>
+      <pubDate>Thu, 05 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>网络</title>
+      <link>http://smilerfu.github.io/categories/%E7%BD%91%E7%BB%9C/</link>
+      <pubDate>Tue, 17 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/categories/%E7%BD%91%E7%BB%9C/</guid>
       <description></description>
     </item>
     

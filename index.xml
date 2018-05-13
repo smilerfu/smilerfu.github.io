@@ -6,10 +6,298 @@
     <description>Recent content on smilerfu&#39;s blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_CN</language>
-    <lastBuildDate>Thu, 05 Apr 2018 09:39:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 13 May 2018 14:59:45 +0800</lastBuildDate>
     
         <atom:link href="http://smilerfu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cocos2d-x Lua &#43; CocosForWin3.10 &#43; BabelLua项目设置</title>
+      <link>http://smilerfu.github.io/post/cocos2d-x-lua-&#43;-cocosforwin3/</link>
+      <pubDate>Sun, 13 May 2018 14:59:45 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/post/cocos2d-x-lua-&#43;-cocosforwin3/</guid>
+      
+        <description>&lt;p&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;项目环境&#34;&gt;项目环境&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;cocos2d-x-3.16&lt;/li&gt;
+&lt;li&gt;VS2013&lt;/li&gt;
+&lt;li&gt;CocosForWin-v3.10.exe&lt;/li&gt;
+&lt;li&gt;BabeLua+For+2013+V3.2.2.0.vsix&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;创建项目&#34;&gt;创建项目&lt;/h4&gt;
+
+&lt;h6 id=&#34;新建cocos2d-x-lua项目&#34;&gt;新建Cocos2d-x lua项目&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;切换到&lt;code&gt;cocos2d-x-3.16\tools\cocos2d-console\bin&lt;/code&gt;目录，执行:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cocos new MyLuaGame -l lua -p com.xxx.xxx -d F:\cocosproject
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;编译项目&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id=&#34;新建-cocostudio项目&#34;&gt;新建 Cocostudio项目&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;打开Cocostudio，选择【文件】，选择【新建项目】
+&lt;img src=&#34;http://smilerfu.github.io/images/cocos2dx/cocostudio_new_project.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;将&lt;code&gt;F:\cocosproject\MyLuaGame\CocosProject\cocosstudio&lt;/code&gt;拷贝到项目根目录，即&lt;code&gt;F:\cocosproject\MyLuaGame&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;将&lt;code&gt;CocosProject.ccs&lt;/code&gt;、&lt;code&gt;CocosProject.cfg&lt;/code&gt;和&lt;code&gt;CocosProject.udf&lt;/code&gt;也拷贝到项目根目录，即&lt;code&gt;F:\cocosproject\MyLuaGame&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;拷贝完毕后，CocosProject这个目录就没有什么用，可以删掉了&lt;/li&gt;
+&lt;li&gt;修改&lt;code&gt;CocosProject.cfg&lt;/code&gt;文件中的&lt;code&gt;CreateFrameworkVersion Value=&amp;quot;cocos2d-x-3.16&amp;quot;&lt;/code&gt;和&lt;code&gt;CurrentFrameworkVersion Value=&amp;quot;cocos2d-x-3.16&lt;/code&gt;，目前不清楚此修改是否有作用&lt;/li&gt;
+&lt;li&gt;使用Cocostudio打开项目，选择&lt;code&gt;F:\cocosproject\MyLuaGame\CocosProject.ccs&lt;/code&gt;打开即可。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id=&#34;新加-lua项目&#34;&gt;新加 lua项目&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;右键解决方案，添加并新建Lua项目
+&lt;img src=&#34;http://smilerfu.github.io/images/cocos2dx/solution_add_lua_project.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;Lua项目路径设置为项目MyLuaGame的根路径
+&lt;img src=&#34;http://smilerfu.github.io/images/cocos2dx/lua_project_new.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;右键Lua项目，选择添加现有目录，将F:\cocosproject\MyLuaGame\src目录添加入
+&lt;img src=&#34;http://smilerfu.github.io/images/cocos2dx/lua_project_add_existing_folder.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;设置LuaProject为启动项目&lt;/li&gt;
+&lt;li&gt;此时添加断点发现并不能中断，修改AppDelegate.cpp文件，添加&lt;code&gt;LuaStack* stack = engine-&amp;gt;getLuaStack();stack-&amp;gt;addSearchPath(&amp;quot;src/&amp;quot;);&lt;/code&gt;
+&lt;img src=&#34;http://smilerfu.github.io/images/cocos2dx/lua_project_debug_appdelegate.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;设置MyLuaGame为启动项目，重新编译运行后，再设置LuaProject为启动项目，此时可以进入断点&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>网络 学习笔记</title>
+      <link>http://smilerfu.github.io/post/%E7%BD%91%E7%BB%9C_%E5%AD%A6%E4%B9%A0_%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Tue, 17 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/post/%E7%BD%91%E7%BB%9C_%E5%AD%A6%E4%B9%A0_%E7%AC%94%E8%AE%B0/</guid>
+      
+        <description>&lt;p&gt;&lt;/p&gt;
+
+&lt;h5 id=&#34;ping使用icmp协议&#34;&gt;ping使用ICMP协议&lt;/h5&gt;
+
+&lt;p&gt;Internet Control Message Protocol”（Internet控制消息协议）的缩写，是TCP/IP协议族的一个子协议，用于在IP主机、路由器之间传递控制消息。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; 学习笔记</title>
+      <link>http://smilerfu.github.io/post/c&#43;&#43;_%E5%AD%A6%E4%B9%A0_%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 16 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/post/c&#43;&#43;_%E5%AD%A6%E4%B9%A0_%E7%AC%94%E8%AE%B0/</guid>
+      
+        <description>&lt;p&gt;&lt;/p&gt;
+
+&lt;h5 id=&#34;前置-后置-递增-递减-运算符&#34;&gt;前置(后置)递增(递减)运算符&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;前置递增:&lt;code&gt;++i&lt;/code&gt; 等价于 &lt;code&gt;i=i+1, i&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;后置递增:&lt;code&gt;i++&lt;/code&gt; 等价于 &lt;code&gt;temp=i, i=i+1, temp&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;temp是编译器产生的一个临时变量，只能作为右值使用。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&#34;左值和右值&#34;&gt;左值和右值&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;++i&lt;/code&gt;是左值(可以形象地记为++在i左边)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;i++&lt;/code&gt;是右值(可以形象地记为++在i右边)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;左值是可以写在等号左边的表达式，必须是一个非const的变量。&lt;br /&gt;
+右值是可以写在等号右边的表达式，可以是一个常量,一个字面数字，或者说一个任意的可以求值的表达式。&lt;br /&gt;
+一个可以作为左值的表达式,同时也是可以作为右值使用的。&lt;br /&gt;
+如果对右值进行了左值的操作，那么是错误的。&lt;/p&gt;
+
+&lt;p&gt;例如:&lt;/p&gt;
+
+&lt;h6 id=&#34;效率&#34;&gt;效率&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;++i&lt;/code&gt;效率更高效一些，因为&lt;code&gt;i++&lt;/code&gt;产生了一个临时的变量temp&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id=&#34;测试代码&#34;&gt;测试代码&lt;/h6&gt;
+
+&lt;pre&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;  
+using namespace std;  
+  
+int main()  
+{  
+    int i=0;  
+    ++++i; // All Right  
+    //i++++; // error C2105: &#39;++&#39; needs l-value  
+    //++i=10; // All Right  
+    //i++=10; // error C2106: &#39;=&#39; : left operand must be l-value  
+    //++i++; // error C2105: &#39;++&#39; needs l-value  
+    return 0;  
+}  
+&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Lua class</title>
+      <link>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_class/</link>
+      <pubDate>Sun, 15 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_class/</guid>
+      
+        <description>&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Lua metatables</title>
+      <link>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_metatables/</link>
+      <pubDate>Sun, 15 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_metatables/</guid>
+      
+        <description>&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Lua string</title>
+      <link>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_string/</link>
+      <pubDate>Sun, 15 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_string/</guid>
+      
+        <description>&lt;p&gt;&lt;/p&gt;
+
+&lt;h5 id=&#34;参考文档&#34;&gt;参考文档&lt;/h5&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.lua.org/manual/5.3/manual.html#pdf-string Manipulation&#34;&gt;http://www.lua.org/manual/5.3/manual.html#pdf-string Manipulation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5 id=&#34;string-byte-s-i-j&#34;&gt;string.byte (s [, i [, j]])&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code&gt;-- 功能: 返回字符 s[i], s[i+1], ..., s[j]的数字码。
+-- 参数: 默认值: i=1, j=i.
+-- 返回值: 返回数字码串
+print(string.byte(&amp;quot;acb&amp;quot;, 1,3))  --&amp;gt; 97  99  98
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;string-char&#34;&gt;string.char (···)&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code&gt;-- 功能: 将number的数字码转为字符
+-- 参数: number
+-- 返回值: 返回字符串
+
+print(string.char(97, 99, 98))  --&amp;gt; acb
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;string-dump-function-strip&#34;&gt;string.dump (function [, strip])&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code&gt;-- 功能: 将一个函数序列化，返回序列化后的二进制字符串。之后可以使用load加载这个字符串。
+-- 参数: strip如果为true，序列化后的字符串将不会包含任何debug信息，可以节省空间。
+-- 返回值: 返回序列化后的二进制字符串
+
+-- 普通函数
+function dumpTest(v)
+    print(&amp;quot;dumpTest: &amp;quot; .. v)
+end
+
+dumpString = string.dump(dumpTest)
+loadFunc = load(dumpString)
+loadFunc(&amp;quot;abcd&amp;quot;)  -&amp;gt; dumpTest: abcd
+
+-- 闭包函数
+function dumpTestClosure()
+    i = 0
+    local  function innerFunc()
+    i = i + 1
+    print(&amp;quot;inner: &amp;quot; .. i)
+    end
+    return innerFunc
+end
+
+closureFunc = dumpTestClosure()
+closureFunc()  --&amp;gt; inner: 1
+closureFunc()  --&amp;gt; inner: 2
+dumpString = string.dump(closureFunc,true)
+loadFunc = load(dumpString)
+loadFunc()  --&amp;gt; inner: 3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;string-find-s-pattern-init-plain&#34;&gt;string.find (s, pattern [, init [, plain]])&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code&gt;-- 功能: 查找字符串s中第一个符合pattern的位置
+-- 参数: init 搜索的起始位置，默认 init=1(可以为负数，表示从后往前数的字符个数)
+--       plain 默认 plain=false，如果为true表示关闭模式匹配，只做简单的查找子串的操作。
+-- 返回值: 找到返回起始位置和终止位置，没找到返回nil
+print(string.find(&amp;quot;abcdabcdabcd&amp;quot;, &amp;quot;cda&amp;quot;))  --&amp;gt; 3    5
+print(string.find(&amp;quot;abcdabcdabcd&amp;quot;, &amp;quot;d&amp;quot;))  --&amp;gt; 4  4
+print(string.find(&amp;quot;abcdabcdabcd&amp;quot;, &amp;quot;123&amp;quot;))  --&amp;gt; nil
+
+print(string.find(&amp;quot;abcdabcdabcd&amp;quot;, &amp;quot;cda&amp;quot;, 4))  --&amp;gt; 7 9
+print(string.find(&amp;quot;abcdabcdabcd&amp;quot;, &amp;quot;cda&amp;quot;, -9))  --&amp;gt; 7    9
+print(string.find(&amp;quot;abcdabcdabcd&amp;quot;, &amp;quot;cda&amp;quot;, -11))  --&amp;gt; 3   5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;gsub&#34;&gt;gsub&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code&gt;print(string.gsub(&amp;quot;one string&amp;quot;, &amp;quot;one&amp;quot;, &amp;quot;another&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Lua 学习笔记</title>
+      <link>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 15 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_%E7%AC%94%E8%AE%B0/</guid>
+      
+        <description>&lt;p&gt;&lt;/p&gt;
+
+&lt;h5 id=&#34;8个基本类型&#34;&gt;8个基本类型&lt;/h5&gt;
+
+&lt;p&gt;lua有8个基本类型，分别为: nil、boolean、number、string、userdata、function、thread、table
+可使用type函数获取变量的类型，返回一个字符串:
+&lt;code&gt;print(type(123))  --&amp;gt;  number&lt;/code&gt;&lt;/p&gt;
+
+&lt;h5 id=&#34;booleans&#34;&gt;Booleans&lt;/h5&gt;
+
+&lt;p&gt;lua除了false和nil为假，其余都为真，0和空字符串也为真。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>IDEA 快捷键</title>
+      <link>http://smilerfu.github.io/post/idea_%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Thu, 12 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/post/idea_%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      
+        <description>&lt;p&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;常用快捷键&#34;&gt;常用快捷键&lt;/h3&gt;
+
+&lt;h5 id=&#34;main函数&#34;&gt;main函数&lt;/h5&gt;
+
+&lt;p&gt;&lt;code&gt;psvm&lt;/code&gt;&lt;/p&gt;
+
+&lt;h5 id=&#34;system-out-println&#34;&gt;System.out.println();&lt;/h5&gt;
+
+&lt;p&gt;&lt;code&gt;sout&lt;/code&gt;&lt;/p&gt;
+
+&lt;h5 id=&#34;for循环&#34;&gt;for循环&lt;/h5&gt;
+
+&lt;p&gt;&lt;code&gt;fori&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;自定义模板编辑&#34;&gt;自定义模板编辑&lt;/h3&gt;</description>
+      
+    </item>
     
     <item>
       <title>DokuWiki环境搭建</title>
@@ -298,13 +586,198 @@ The key&#39;s randomart image is:
     </item>
     
     <item>
-      <title>Lua学习</title>
-      <link>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_%E7%B1%BB/</link>
+      <title>Linux 设置静态IP</title>
+      <link>http://smilerfu.github.io/post/linux_%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81ip/</link>
       <pubDate>Thu, 05 Apr 2018 01:39:00 +0800</pubDate>
       
-      <guid>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_%E7%B1%BB/</guid>
+      <guid>http://smilerfu.github.io/post/linux_%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81ip/</guid>
       
-        <description>&lt;p&gt;&lt;/p&gt;</description>
+        <description>&lt;p&gt;
+【注】: 以下环境在CentOS系统上&lt;/p&gt;
+
+&lt;p&gt;网络配置的配置文件在&lt;code&gt;/etc/sysconfig/network-scripts/&lt;/code&gt;下，文件名前缀为&lt;code&gt;ifcfg-&lt;/code&gt;后面跟的就是网卡的名称，可以通过双TAB键查看然后编辑。&lt;/p&gt;
+
+&lt;p&gt;例如网卡名为 eth0 的配置文件为: &lt;code&gt;ifcfg-eth0&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;ifcfg-lo&lt;/code&gt;是本地回环地址的配置文件，所有计算机都有，无需修改。&lt;/p&gt;
+
+&lt;p&gt;默认情况下，是DHCP动态获取的。配置文件内容如下:
+&lt;img src=&#34;http://smilerfu.github.io/images/linux/static_ip/linux_static_ip_1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如果需要改成静态的，修改的地方如下:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;把 &lt;code&gt;BOOTPROTO=dhcp&lt;/code&gt; 改成 &lt;code&gt;BOOTPROTO=static&lt;/code&gt; 表示静态获取&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;在最后追加下面的配置：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;BROADCAST=192.168.1.255
+IPADDR=192.168.1.123
+NETMASK=255.255.255.0
+GATEWAY=192.168.1.1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;设置说明:\&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;BROADCAST - 局域网广播地址&lt;/li&gt;
+&lt;li&gt;IPADDR - 静态IP&lt;/li&gt;
+&lt;li&gt;NETMASK - 子网掩码&lt;/li&gt;
+&lt;li&gt;GATEWAY - 网关或者路由地址&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;需要说明，原来还有个NETWORK配置的是局域网网络号，这个是ifcalc自动计算的，所以这里配置这些就足够了&lt;/p&gt;
+
+&lt;p&gt;配置如下图:
+&lt;img src=&#34;http://smilerfu.github.io/images/linux/static_ip/linux_static_ip_2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;这时候重启下网络服务器&lt;/p&gt;
+
+&lt;p&gt;使用命令行:&lt;code&gt;service network restart&lt;/code&gt;或者&lt;code&gt;/etc/init.d/network restart&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;重启后，静态ip就生效了&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;发现无法连接外网&lt;/p&gt;
+
+&lt;p&gt;配置成功后，dns配置一般会消失，所以这时候就ping不通域名了，无法连接外网，需要配置DNS，配置文件位置是：&lt;code&gt;/etc/resolv.conf&lt;/code&gt;，里面的nameserver指定dns服务器地址。&lt;/p&gt;
+
+&lt;p&gt;但是我们修改的文件仍然是&lt;code&gt;ifcfg-eth0&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;使用命令&lt;code shell&gt; ipconfig /all &lt;/code&gt;查看主机(Windos)的DNS配置如下:
+&lt;img src=&#34;http://smilerfu.github.io/images/linux/static_ip/linux_static_ip_5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在配置文件末尾增加如下配置:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;DNS1=114.114.114.114
+DNS2=100.63.0.1
+DNS3=202.96.128.166
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://smilerfu.github.io/images/linux/static_ip/linux_static_ip_3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;然后和步骤3一样，重启下网络服务器&lt;/p&gt;
+
+&lt;p&gt;此时再去重新看&lt;code&gt;resolv.conf&lt;/code&gt;文件内容，发现此文件已经更新。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://smilerfu.github.io/images/linux/static_ip/linux_static_ip_4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Python学习-Python扩展</title>
+      <link>http://smilerfu.github.io/post/python_%E5%AD%A6%E4%B9%A0_c%E4%BA%A4%E4%BA%92/</link>
+      <pubDate>Thu, 05 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/post/python_%E5%AD%A6%E4%B9%A0_c%E4%BA%A4%E4%BA%92/</guid>
+      
+        <description>&lt;p&gt;
+【注】: 以下环境采用Python3.6.2版本&lt;/p&gt;
+
+&lt;h3 id=&#34;初始化python虚拟机&#34;&gt;初始化Python虚拟机&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;#include &amp;quot;stdafx.h&amp;quot;
+#include &amp;lt;Python.h&amp;gt;
+int main()
+{
+    // 初始化Python解释器
+    Py_Initialize();
+    if (!Py_IsInitialized())
+    {
+        PyErr_Print();
+        system(&amp;quot;pause&amp;quot;);
+        exit(-1);
+    }
+
+    // 将字符串作为代码执行，类似exec
+    PyRun_SimpleString(&amp;quot;import sys&amp;quot;);
+    PyRun_SimpleString(&amp;quot;print(dir(sys))&amp;quot;);
+
+    // 报错堆栈打印
+    PyErr_Print();
+
+    // 结束Python解释器
+    Py_Finalize();
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;几个常用接口&#34;&gt;几个常用接口&lt;/h3&gt;
+
+&lt;h5 id=&#34;1-int-pyrun-simplestring-const-char-command&#34;&gt;1.int PyRun_SimpleString(const char *command)&lt;/h5&gt;
+
+&lt;p&gt;将字符串作为代码执行，类似&lt;code&gt;exec&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;返回值: 执行成功返回0，如果有异常返回-1&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;PyRun_SimpleString(&amp;quot;import sys&amp;quot;);
+PyRun_SimpleString(&amp;quot;print(dir(sys))&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;2-pyobject-pyimport-importmodule-const-char-name&#34;&gt;2. PyObject* PyImport_ImportModule(const char *name)&lt;/h5&gt;
+
+&lt;p&gt;导入一个模块，类似&lt;code&gt;import&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;返回值: PyObject(Return value: New reference)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;PyObject* mainModule = PyImport_ImportModule(&amp;quot;main&amp;quot;);
+if (!mainModule)
+{
+    PyErr_Print();
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;3-pyobject-pymodule-getdict-pyobject-module&#34;&gt;3. PyObject* PyModule_GetDict(PyObject *module)&lt;/h5&gt;
+
+&lt;p&gt;获取模块属性字典&lt;/p&gt;
+
+&lt;p&gt;PyObject(Return value: Borrowed reference)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;PyObject* mainDict = PyModule_GetDict(mainModule);
+if (!mainDict)
+{
+    PyErr_Print();
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;4-pyobject-pydict-getitemstring-pyobject-p-const-char-key&#34;&gt;4. PyObject* PyDict_GetItemString(PyObject *p, const char *key)&lt;/h5&gt;
+
+&lt;p&gt;获取模块属性&lt;/p&gt;
+
+&lt;p&gt;返回值: PyObject(Return value: Borrowed reference)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;PyObject* mainStartFunc = PyDict_GetItemString(mainDict, &amp;quot;Start&amp;quot;);
+if (!mainStartFunc || !PyCallable_Check(mainStartFunc))
+{
+    PyErr_Print();
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;5-pyobject-pyobject-callfunction-pyobject-callable-const-char-format&#34;&gt;5. PyObject* PyObject_CallFunction(PyObject *callable, const char *format, &amp;hellip;)&lt;/h5&gt;
+
+&lt;p&gt;调用一个函数&lt;/p&gt;
+
+&lt;p&gt;返回值: PyObject(Return value: New reference)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;PyObject* returnValue = PyObject_CallFunction(mainStartFunc, NULL);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;6-void-py-decref-pyobject-o-和-void-py-xdecref-pyobject-o&#34;&gt;6. void Py_DECREF(PyObject *o) 和 void Py_XDECREF(PyObject *o)&lt;/h5&gt;
+
+&lt;p&gt;减引用计数&lt;/p&gt;
+
+&lt;p&gt;两个函数区别是:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Py_DECREF传入参数o不能为NULL&lt;/li&gt;
+&lt;li&gt;Py_XDECREF允许o为NULL&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;Py_DECREF(returnValue);  // 或者: Py_XDECREF(returnValue); 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;new-reference-和-borrowed-reference&#34;&gt;New reference 和 Borrowed reference&lt;/h3&gt;
+
+&lt;p&gt;New reference 会增加引用计数，因此在释放时需要调用&lt;code&gt;Py_DECREF&lt;/code&gt;或者&lt;code&gt;Py_XDECREF&lt;/code&gt;进行减引用计数&lt;/p&gt;</description>
       
     </item>
     

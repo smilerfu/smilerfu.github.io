@@ -3,6 +3,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://smilerfu.github.io/post/cocos2d-x-lua-&#43;-cocosforwin3/</loc>
+    <lastmod>2018-05-13T14:59:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://smilerfu.github.io/post/%E7%BD%91%E7%BB%9C_%E5%AD%A6%E4%B9%A0_%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2018-04-17T01:39:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://smilerfu.github.io/post/c&#43;&#43;_%E5%AD%A6%E4%B9%A0_%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2018-04-16T01:39:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_class/</loc>
+    <lastmod>2018-04-15T01:39:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_metatables/</loc>
+    <lastmod>2018-04-15T01:39:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_string/</loc>
+    <lastmod>2018-04-15T01:39:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2018-04-15T01:39:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://smilerfu.github.io/post/idea_%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
+    <lastmod>2018-04-12T01:39:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://smilerfu.github.io/post/dokuwiki_%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2018-04-05T09:39:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -24,14 +80,50 @@
   </url>
   
   <url>
-    <loc>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_%E7%B1%BB/</loc>
+    <loc>http://smilerfu.github.io/post/linux_%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81ip/</loc>
     <lastmod>2018-04-05T01:39:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
+    <loc>http://smilerfu.github.io/post/python_%E5%AD%A6%E4%B9%A0_c%E4%BA%A4%E4%BA%92/</loc>
+    <lastmod>2018-04-05T01:39:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://smilerfu.github.io/categories/babelua/</loc>
+    <lastmod>2018-05-13T14:59:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://smilerfu.github.io/categories/c/</loc>
+    <lastmod>2018-04-16T01:39:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://smilerfu.github.io/categories/c&#43;&#43;/</loc>
+    <lastmod>2018-04-16T01:39:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://smilerfu.github.io/categories/</loc>
+    <lastmod>2018-05-13T14:59:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://smilerfu.github.io/categories/cocos2dx/</loc>
+    <lastmod>2018-05-13T14:59:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -51,28 +143,78 @@
   </url>
   
   <url>
-    <loc>http://smilerfu.github.io/categories/lua/</loc>
+    <loc>http://smilerfu.github.io/categories/idea/</loc>
+    <lastmod>2018-04-12T01:39:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://smilerfu.github.io/categories/jave/</loc>
+    <lastmod>2018-04-12T01:39:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://smilerfu.github.io/tags/linux/</loc>
     <lastmod>2018-04-05T01:39:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>http://smilerfu.github.io/categories/linux/</loc>
+    <lastmod>2018-04-05T01:39:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://smilerfu.github.io/categories/lua/</loc>
+    <lastmod>2018-04-15T01:39:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://smilerfu.github.io/post/</loc>
-    <lastmod>2018-04-05T09:39:00+08:00</lastmod>
+    <lastmod>2018-05-13T14:59:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://smilerfu.github.io/tags/python/</loc>
+    <lastmod>2018-04-05T01:39:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://smilerfu.github.io/categories/python/</loc>
+    <lastmod>2018-04-05T01:39:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://smilerfu.github.io/tags/</loc>
+    <lastmod>2018-04-05T01:39:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://smilerfu.github.io/</loc>
-    <lastmod>2018-04-05T09:39:00+08:00</lastmod>
+    <lastmod>2018-05-13T14:59:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://smilerfu.github.io/categories/%E7%BD%91%E7%BB%9C/</loc>
+    <lastmod>2018-04-17T01:39:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

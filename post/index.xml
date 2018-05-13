@@ -6,10 +6,82 @@
     <description>Recent content in Posts on smilerfu&#39;s blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_CN</language>
-    <lastBuildDate>Thu, 05 Apr 2018 09:39:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 13 May 2018 14:59:45 +0800</lastBuildDate>
     
 	<atom:link href="http://smilerfu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cocos2d-x Lua &#43; CocosForWin3.10 &#43; BabelLua项目设置</title>
+      <link>http://smilerfu.github.io/post/cocos2d-x-lua-&#43;-cocosforwin3/</link>
+      <pubDate>Sun, 13 May 2018 14:59:45 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/post/cocos2d-x-lua-&#43;-cocosforwin3/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>网络 学习笔记</title>
+      <link>http://smilerfu.github.io/post/%E7%BD%91%E7%BB%9C_%E5%AD%A6%E4%B9%A0_%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Tue, 17 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/post/%E7%BD%91%E7%BB%9C_%E5%AD%A6%E4%B9%A0_%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; 学习笔记</title>
+      <link>http://smilerfu.github.io/post/c&#43;&#43;_%E5%AD%A6%E4%B9%A0_%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 16 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/post/c&#43;&#43;_%E5%AD%A6%E4%B9%A0_%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Lua class</title>
+      <link>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_class/</link>
+      <pubDate>Sun, 15 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_class/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Lua metatables</title>
+      <link>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_metatables/</link>
+      <pubDate>Sun, 15 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_metatables/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Lua string</title>
+      <link>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_string/</link>
+      <pubDate>Sun, 15 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_string/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Lua 学习笔记</title>
+      <link>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 15 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>IDEA 快捷键</title>
+      <link>http://smilerfu.github.io/post/idea_%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Thu, 12 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/post/idea_%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>DokuWiki环境搭建</title>
@@ -39,12 +111,21 @@
     </item>
     
     <item>
-      <title>Lua学习</title>
-      <link>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_%E7%B1%BB/</link>
+      <title>Linux 设置静态IP</title>
+      <link>http://smilerfu.github.io/post/linux_%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81ip/</link>
       <pubDate>Thu, 05 Apr 2018 01:39:00 +0800</pubDate>
       
-      <guid>http://smilerfu.github.io/post/lua_%E5%AD%A6%E4%B9%A0_%E7%B1%BB/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;</description>
+      <guid>http://smilerfu.github.io/post/linux_%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81ip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python学习-Python扩展</title>
+      <link>http://smilerfu.github.io/post/python_%E5%AD%A6%E4%B9%A0_c%E4%BA%A4%E4%BA%92/</link>
+      <pubDate>Thu, 05 Apr 2018 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/post/python_%E5%AD%A6%E4%B9%A0_c%E4%BA%A4%E4%BA%92/</guid>
+      <description></description>
     </item>
     
   </channel>
