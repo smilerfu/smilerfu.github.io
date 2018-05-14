@@ -45,13 +45,17 @@
 &lt;h6 id=&#34;新建-cocostudio项目&#34;&gt;新建 Cocostudio项目&lt;/h6&gt;
 
 &lt;ul&gt;
-&lt;li&gt;打开Cocostudio，选择【文件】，选择【新建项目】
+&lt;li&gt;打开Cocostudio，选择【文件】，选择【新建项目】，我们这里新建项目名称为 CocosProject
 &lt;img src=&#34;http://smilerfu.github.io/images/cocos2dx/cocostudio_new_project.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
-&lt;li&gt;将&lt;code&gt;F:\cocosproject\MyLuaGame\CocosProject\cocosstudio&lt;/code&gt;拷贝到项目根目录，即&lt;code&gt;F:\cocosproject\MyLuaGame&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;将&lt;code&gt;CocosProject.ccs&lt;/code&gt;、&lt;code&gt;CocosProject.cfg&lt;/code&gt;和&lt;code&gt;CocosProject.udf&lt;/code&gt;也拷贝到项目根目录，即&lt;code&gt;F:\cocosproject\MyLuaGame&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;拷贝完毕后，CocosProject这个目录就没有什么用，可以删掉了&lt;/li&gt;
+&lt;li&gt;由于我们只用来编辑资源，因此可以删除CocosProject目录底下以下目录和文件:framework、src、res、.project、config.json和.cocos-project.json&lt;/li&gt;
 &lt;li&gt;修改&lt;code&gt;CocosProject.cfg&lt;/code&gt;文件中的&lt;code&gt;CreateFrameworkVersion Value=&amp;quot;cocos2d-x-3.16&amp;quot;&lt;/code&gt;和&lt;code&gt;CurrentFrameworkVersion Value=&amp;quot;cocos2d-x-3.16&lt;/code&gt;，目前不清楚此修改是否有作用&lt;/li&gt;
-&lt;li&gt;使用Cocostudio打开项目，选择&lt;code&gt;F:\cocosproject\MyLuaGame\CocosProject.ccs&lt;/code&gt;打开即可。&lt;/li&gt;
+&lt;li&gt;使用Cocostudio打开项目，选择&lt;code&gt;F:\cocosproject\MyLuaGame\CocosProject\CocosProject.ccs&lt;/code&gt;打开即可。&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;修改cocostudio项目设置的资源导出目录&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://smilerfu.github.io/images/cocos2dx/cocostudio_project_settings.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://smilerfu.github.io/images/cocos2dx/cocostudio_project_settings_pack.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h6 id=&#34;新加-lua项目&#34;&gt;新加 lua项目&lt;/h6&gt;
@@ -63,10 +67,13 @@
 &lt;img src=&#34;http://smilerfu.github.io/images/cocos2dx/lua_project_new.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
 &lt;li&gt;右键Lua项目，选择添加现有目录，将F:\cocosproject\MyLuaGame\src目录添加入
 &lt;img src=&#34;http://smilerfu.github.io/images/cocos2dx/lua_project_add_existing_folder.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;右键LuaProject，选择属性，设置Lua exe path为&lt;code&gt;$(SolutionDir)../../simulator/win32/MyLuaGame.exe&lt;/code&gt;和Working path为&lt;code&gt;$(SolutionDir)../../&lt;/code&gt;
+&lt;img src=&#34;http://smilerfu.github.io/images/cocos2dx/lua_project_set_path.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
 &lt;li&gt;设置LuaProject为启动项目&lt;/li&gt;
 &lt;li&gt;此时添加断点发现并不能中断，修改AppDelegate.cpp文件，添加&lt;code&gt;LuaStack* stack = engine-&amp;gt;getLuaStack();stack-&amp;gt;addSearchPath(&amp;quot;src/&amp;quot;);&lt;/code&gt;
 &lt;img src=&#34;http://smilerfu.github.io/images/cocos2dx/lua_project_debug_appdelegate.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
-&lt;li&gt;设置MyLuaGame为启动项目，重新编译运行后，再设置LuaProject为启动项目，此时可以进入断点&lt;/li&gt;
+&lt;li&gt;设置MyLuaGame为启动项目，重新编译运行后，再设置LuaProject为启动项目，此时可以进入断点
+&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
       
     </item>
