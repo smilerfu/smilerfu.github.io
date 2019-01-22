@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>线性回归 - smilerfu&#39;s blogs</title>
+  <link rel="alternate" hreflang="zh_CN" href="http://smilerfu.github.io/" />
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+
+<meta name="author" content="smilerfu" />
+  <meta name="description" content="
+" />
+
+  <meta name="keywords" content="Hugo, theme, jane" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.38" />
+
+
+<link rel="canonical" href="http://smilerfu.github.io/post/ml_linear_regression/" />
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon.ico" />
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+<link href="/dist/jane.min.css?v=2.7.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="线性回归" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://smilerfu.github.io/post/ml_linear_regression/" />
+
+
+
+<meta property="article:published_time" content="2019-01-16T01:39:00&#43;08:00"/>
+
+<meta property="article:modified_time" content="2019-01-16T01:39:00&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="线性回归">
+<meta itemprop="description" content="">
+
+
+<meta itemprop="datePublished" content="2019-01-16T01:39:00&#43;08:00" />
+<meta itemprop="dateModified" content="2019-01-16T01:39:00&#43;08:00" />
+<meta itemprop="wordCount" content="1165">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="线性回归"/>
+<meta name="twitter:description" content=""/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">smilerfu&#39;s blogs</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">目录</li>
+      </a>
+  </ul>
+</nav>
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">smilerfu&#39;s blogs</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        
+        <a class="menu-item-link" href="/">主页</a>
+        
+      </li><li class="menu-item">
+        
+        <a class="menu-item-link" href="/post/">文章</a>
+        
+      </li><li class="menu-item">
+        
+        <a class="menu-item-link" href="/tags/">标签</a>
+        
+      </li><li class="menu-item">
+        
+        <a class="menu-item-link" href="/categories/">目录</a>
+        
+      </li>
+  </ul>
+</nav>
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">线性回归</h1>
+      
+      <div class="post-meta">
+        <span class="post-time"> 2019-01-16 </span>
+        <div class="post-category">
+            
+              <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"> 机器学习 </a>
+            
+          </div>
+        <span class="more-meta"> 1165 words </span>
+        <span class="more-meta"> 3 min read </span>
+      </div>
+    </header>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p></p>
+
+<h5 id="章节">章节</h5>
+
+<ul>
+<li><p>引言</p></li>
+
+<li><p>过程描述</p></li>
+
+<li><p>如何编码?</p></li>
+
+<li><p>总结</p></li>
+</ul>
+
+<h5 id="使用tensorflow进行线性回归">使用TensorFlow进行线性回归</h5>
+
+<p>这篇教程是关于如何通过TensorFlow训练一个线性模型来拟合数据。或者，您可以查看这篇<a href="http://www.machinelearninguru.com/deep_learning/tensorflow/machine_learning_basics/linear_regresstion/linear_regression.html">博文</a>。</p>
+
+<h5 id="引言">引言</h5>
+
+<p>在机器学和统计学上，线性回归是对诸如一个变量Y和至少一个作为自变量X之间关系的建模。在线性回归中，线性关系将由一个参数可通过数据进行估计的预测函数进行建模，并称为之线性模型。线性回归算法的主要优点是简单易用，使用它可以非常直接地解释新的模型，并将数据映射到新的空间。在这篇文章中，我们将会介绍如何使用TensorFlow来训练线性模型以及如何展示生成的模型。</p>
+
+<h5 id="过程描述">过程描述</h5>
+
+<p>为了训练这个模型，TensorFlow循环遍历数据，它应该找到一条拟合数据的最佳直线(因为我们使用的是线性模型)。通过设计一个合适的优化算法其要求是一个合适的损失函数来预计两个变量X,Y之间的线性关系。数据集可以从<a href="http://web.stanford.edu/class/cs20si/index.html">Stanford course CS 20SI</a>:TensorFlow for Deep Learning Research下载。</p>
+
+<h5 id="如何编码">如何编码?</h5>
+
+<p>首先，第一步加载所需要的库和数据集。</p>
+
+<pre><code class="language-python"># Data file provided by the Stanford course CS 20SI: TensorFlow for Deep Learning Research.
+# https://github.com/chiphuyen/tf-stanford-tutorials
+DATA_FILE = &quot;data/fire_theft.xls&quot;
+
+# read the data from the .xls file.
+book = xlrd.open_workbook(DATA_FILE, encoding_override=&quot;utf-8&quot;)
+sheet = book.sheet_by_index(0)
+data = np.asarray([sheet.row_values(i) for i in range(1, sheet.nrows)])
+num_samples = sheet.nrows - 1
+
+#######################
+## Defining flags #####
+#######################
+tf.app.flags.DEFINE_integer(
+    'num_epochs', 50, 'The number of epochs for training the model. Default=50')
+# Store all elements in FLAG structure!
+FLAGS = tf.app.flags.FLAGS
+</code></pre>
+
+<p>接着我们定义和初始化所需要的变量。</p>
+
+<pre><code class="language-python"># creating the weight and bias.
+# The defined variables will be initialized to zero.
+W = tf.Variable(0.0, name=&quot;weights&quot;)
+b = tf.Variable(0.0, name=&quot;bias&quot;)
+</code></pre>
+
+<p>之后，我们定义一些必要函数。不同的标签用于区分定义的函数。</p>
+
+<pre><code class="language-python">def inputs():
+    &quot;&quot;&quot;
+    Defining the place_holders.
+    :return:
+            Returning the data and label lace holders.
+    &quot;&quot;&quot;
+    X = tf.placeholder(tf.float32, name=&quot;X&quot;)
+    Y = tf.placeholder(tf.float32, name=&quot;Y&quot;)
+    return X,Y
+</code></pre>
+
+<pre><code class="language-python">def inference(X):
+    &quot;&quot;&quot;
+    Forward passing the X.
+    :param X: Input.
+    :return: X*W + b.
+    &quot;&quot;&quot;
+    return X * W + b
+</code></pre>
+
+<pre><code class="language-python">def loss(X, Y):
+    &quot;&quot;&quot;
+    compute the loss by comparing the predicted value to the actual label.
+    :param X: The input.
+    :param Y: The label.
+    :return: The loss over the samples.
+    &quot;&quot;&quot;
+
+    # Making the prediction.
+    Y_predicted = inference(X)
+    return tf.squared_difference(Y, Y_predicted)
+</code></pre>
+
+<pre><code class="language-python"># The training function.
+def train(loss):
+    learning_rate = 0.0001
+    return tf.train.GradientDescentOptimizer(learning_rate).minimize(loss)
+</code></pre>
+
+<p>接下来，我们遍历不同代的数据，并执行优化过程。</p>
+
+<pre><code class="language-python">with tf.Session() as sess:
+
+    # Initialize the variables[w and b].
+    sess.run(tf.global_variables_initializer())
+
+    # Get the input tensors
+    X, Y = inputs()
+
+    # Return the train loss and create the train_op.
+    train_loss = loss(X, Y)
+    train_op = train(train_loss)
+
+    # Step 8: train the model
+    for epoch_num in range(FLAGS.num_epochs): # run 100 epochs
+        for x, y in data:
+          train_op = train(train_loss)
+
+          # Session runs train_op to minimize loss
+          loss_value,_ = sess.run([train_loss,train_op], feed_dict={X: x, Y: y})
+
+        # Displaying the loss per epoch.
+        print('epoch %d, loss=%f' %(epoch_num+1, loss_value))
+
+        # save the values of weight and bias
+        wcoeff, bias = sess.run([W, b])
+</code></pre>
+
+<p>在上面的代码中，<code>sess.run(tf.global_variables_initializer())</code>初始化所有定义的全局变量。<code>train_op</code>建立在<code>train_loss</code>之上，并将在每一步中被更新。最后将返回该线性模型的参数，例如wcoff和bias。为了评估，我们将演示预估直线和原始数据是怎么样让模型去拟合数据的。</p>
+
+<pre><code class="language-python">###############################
+#### Evaluate and plot ########
+###############################
+Input_values = data[:,0]
+Labels = data[:,1]
+Prediction_values = data[:,0] * wcoeff + bias
+plt.plot(Input_values, Labels, 'ro', label='main')
+plt.plot(Input_values, Prediction_values, label='Predicted')
+
+# Saving the result.
+plt.legend()
+plt.savefig('plot.png')
+plt.close()
+</code></pre>
+
+<p>结果如下图所示：
+<img src="/images/ml/updating_model.gif" alt="" />
+图1:原始数据和预估线性模型</p>
+
+<p>在上面的GIF动画中，展示了更新过程中模型中有一些小偏差。可以观察到，线性模型肯定不是最好的。然而，我们提到过，它的优势就是简单易用。</p>
+
+<h5 id="总结">总结</h5>
+
+<p>在本教程中，我们使用TensorFlow完成了线性模型创建。在训练后得到的直线并不能保证是最好的。不同的参数会影响收敛精度。使用随机优化找到线性模型，其简单性使我们的世界变得更容易。</p>
+
+<p>本文翻译自: <a href="https://github.com/osforscience/TensorFlow-Course/tree/master/docs/tutorials/2-basics_in_machine_learning/linear_regression">https://github.com/osforscience/TensorFlow-Course/tree/master/docs/tutorials/2-basics_in_machine_learning/linear_regression</a></p>
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/cocos2d-x-lua-&#43;-cocosforwin3/">
+            <span class="next-text nav-default">Cocos2d-x Lua &#43; CocosForWin3.10 &#43; BabelLua项目设置</span>
+            <span class="prev-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+    
+  </article>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" rel="me" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://en.xianmin.org/hugo-theme-jane/" rel="me" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://en.xianmin.org/hugo-theme-jane/" rel="me" class="iconfont icon-goodreads" title="goodreads"></a>
+  <a href="http://smilerfu.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">smilerfu</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+<script type="text/javascript" src="/dist/jane.min.js?v=2.7.0"></script>
+
+
+
+
+
+</body>
+</html>

@@ -6,10 +6,175 @@
     <description>Recent content on smilerfu&#39;s blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_CN</language>
-    <lastBuildDate>Sun, 13 May 2018 14:59:45 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 16 Jan 2019 01:39:00 +0800</lastBuildDate>
     
         <atom:link href="http://smilerfu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>线性回归</title>
+      <link>http://smilerfu.github.io/post/ml_linear_regression/</link>
+      <pubDate>Wed, 16 Jan 2019 01:39:00 +0800</pubDate>
+      
+      <guid>http://smilerfu.github.io/post/ml_linear_regression/</guid>
+      
+        <description>&lt;p&gt;&lt;/p&gt;
+
+&lt;h5 id=&#34;章节&#34;&gt;章节&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;引言&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;过程描述&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;如何编码?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;总结&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&#34;使用tensorflow进行线性回归&#34;&gt;使用TensorFlow进行线性回归&lt;/h5&gt;
+
+&lt;p&gt;这篇教程是关于如何通过TensorFlow训练一个线性模型来拟合数据。或者，您可以查看这篇&lt;a href=&#34;http://www.machinelearninguru.com/deep_learning/tensorflow/machine_learning_basics/linear_regresstion/linear_regression.html&#34;&gt;博文&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h5 id=&#34;引言&#34;&gt;引言&lt;/h5&gt;
+
+&lt;p&gt;在机器学和统计学上，线性回归是对诸如一个变量Y和至少一个作为自变量X之间关系的建模。在线性回归中，线性关系将由一个参数可通过数据进行估计的预测函数进行建模，并称为之线性模型。线性回归算法的主要优点是简单易用，使用它可以非常直接地解释新的模型，并将数据映射到新的空间。在这篇文章中，我们将会介绍如何使用TensorFlow来训练线性模型以及如何展示生成的模型。&lt;/p&gt;
+
+&lt;h5 id=&#34;过程描述&#34;&gt;过程描述&lt;/h5&gt;
+
+&lt;p&gt;为了训练这个模型，TensorFlow循环遍历数据，它应该找到一条拟合数据的最佳直线(因为我们使用的是线性模型)。通过设计一个合适的优化算法其要求是一个合适的损失函数来预计两个变量X,Y之间的线性关系。数据集可以从&lt;a href=&#34;http://web.stanford.edu/class/cs20si/index.html&#34;&gt;Stanford course CS 20SI&lt;/a&gt;:TensorFlow for Deep Learning Research下载。&lt;/p&gt;
+
+&lt;h5 id=&#34;如何编码&#34;&gt;如何编码?&lt;/h5&gt;
+
+&lt;p&gt;首先，第一步加载所需要的库和数据集。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Data file provided by the Stanford course CS 20SI: TensorFlow for Deep Learning Research.
+# https://github.com/chiphuyen/tf-stanford-tutorials
+DATA_FILE = &amp;quot;data/fire_theft.xls&amp;quot;
+
+# read the data from the .xls file.
+book = xlrd.open_workbook(DATA_FILE, encoding_override=&amp;quot;utf-8&amp;quot;)
+sheet = book.sheet_by_index(0)
+data = np.asarray([sheet.row_values(i) for i in range(1, sheet.nrows)])
+num_samples = sheet.nrows - 1
+
+#######################
+## Defining flags #####
+#######################
+tf.app.flags.DEFINE_integer(
+    &#39;num_epochs&#39;, 50, &#39;The number of epochs for training the model. Default=50&#39;)
+# Store all elements in FLAG structure!
+FLAGS = tf.app.flags.FLAGS
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;接着我们定义和初始化所需要的变量。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# creating the weight and bias.
+# The defined variables will be initialized to zero.
+W = tf.Variable(0.0, name=&amp;quot;weights&amp;quot;)
+b = tf.Variable(0.0, name=&amp;quot;bias&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;之后，我们定义一些必要函数。不同的标签用于区分定义的函数。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def inputs():
+    &amp;quot;&amp;quot;&amp;quot;
+    Defining the place_holders.
+    :return:
+            Returning the data and label lace holders.
+    &amp;quot;&amp;quot;&amp;quot;
+    X = tf.placeholder(tf.float32, name=&amp;quot;X&amp;quot;)
+    Y = tf.placeholder(tf.float32, name=&amp;quot;Y&amp;quot;)
+    return X,Y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def inference(X):
+    &amp;quot;&amp;quot;&amp;quot;
+    Forward passing the X.
+    :param X: Input.
+    :return: X*W + b.
+    &amp;quot;&amp;quot;&amp;quot;
+    return X * W + b
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def loss(X, Y):
+    &amp;quot;&amp;quot;&amp;quot;
+    compute the loss by comparing the predicted value to the actual label.
+    :param X: The input.
+    :param Y: The label.
+    :return: The loss over the samples.
+    &amp;quot;&amp;quot;&amp;quot;
+
+    # Making the prediction.
+    Y_predicted = inference(X)
+    return tf.squared_difference(Y, Y_predicted)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# The training function.
+def train(loss):
+    learning_rate = 0.0001
+    return tf.train.GradientDescentOptimizer(learning_rate).minimize(loss)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;接下来，我们遍历不同代的数据，并执行优化过程。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;with tf.Session() as sess:
+
+    # Initialize the variables[w and b].
+    sess.run(tf.global_variables_initializer())
+
+    # Get the input tensors
+    X, Y = inputs()
+
+    # Return the train loss and create the train_op.
+    train_loss = loss(X, Y)
+    train_op = train(train_loss)
+
+    # Step 8: train the model
+    for epoch_num in range(FLAGS.num_epochs): # run 100 epochs
+        for x, y in data:
+          train_op = train(train_loss)
+
+          # Session runs train_op to minimize loss
+          loss_value,_ = sess.run([train_loss,train_op], feed_dict={X: x, Y: y})
+
+        # Displaying the loss per epoch.
+        print(&#39;epoch %d, loss=%f&#39; %(epoch_num+1, loss_value))
+
+        # save the values of weight and bias
+        wcoeff, bias = sess.run([W, b])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在上面的代码中，&lt;code&gt;sess.run(tf.global_variables_initializer())&lt;/code&gt;初始化所有定义的全局变量。&lt;code&gt;train_op&lt;/code&gt;建立在&lt;code&gt;train_loss&lt;/code&gt;之上，并将在每一步中被更新。最后将返回该线性模型的参数，例如wcoff和bias。为了评估，我们将演示预估直线和原始数据是怎么样让模型去拟合数据的。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;###############################
+#### Evaluate and plot ########
+###############################
+Input_values = data[:,0]
+Labels = data[:,1]
+Prediction_values = data[:,0] * wcoeff + bias
+plt.plot(Input_values, Labels, &#39;ro&#39;, label=&#39;main&#39;)
+plt.plot(Input_values, Prediction_values, label=&#39;Predicted&#39;)
+
+# Saving the result.
+plt.legend()
+plt.savefig(&#39;plot.png&#39;)
+plt.close()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;结果如下图所示：
+&lt;img src=&#34;http://smilerfu.github.io/images/ml/updating_model.gif&#34; alt=&#34;&#34; /&gt;
+图1:原始数据和预估线性模型&lt;/p&gt;
+
+&lt;p&gt;在上面的GIF动画中，展示了更新过程中模型中有一些小偏差。可以观察到，线性模型肯定不是最好的。然而，我们提到过，它的优势就是简单易用。&lt;/p&gt;
+
+&lt;h5 id=&#34;总结&#34;&gt;总结&lt;/h5&gt;
+
+&lt;p&gt;在本教程中，我们使用TensorFlow完成了线性模型创建。在训练后得到的直线并不能保证是最好的。不同的参数会影响收敛精度。使用随机优化找到线性模型，其简单性使我们的世界变得更容易。&lt;/p&gt;
+
+&lt;p&gt;本文翻译自: &lt;a href=&#34;https://github.com/osforscience/TensorFlow-Course/tree/master/docs/tutorials/2-basics_in_machine_learning/linear_regression&#34;&gt;https://github.com/osforscience/TensorFlow-Course/tree/master/docs/tutorials/2-basics_in_machine_learning/linear_regression&lt;/a&gt;&lt;/p&gt;</description>
+      
+    </item>
     
     <item>
       <title>Cocos2d-x Lua &#43; CocosForWin3.10 &#43; BabelLua项目设置</title>
@@ -134,7 +299,7 @@
 
 &lt;h6 id=&#34;测试代码&#34;&gt;测试代码&lt;/h6&gt;
 
-&lt;pre&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;  
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include &amp;lt;iostream&amp;gt;  
 using namespace std;  
   
 int main()  

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Cocos2d-x Lua &#43; CocosForWin3.10 &#43; BabelLua项目设置 - smilerfu&#39;s blogs</title>
+  <title>机器学习 · smilerfu&#39;s blogs</title>
   <link rel="alternate" hreflang="zh_CN" href="http://smilerfu.github.io/" />
 
 <meta name="renderer" content="webkit" />
@@ -26,10 +26,8 @@
 
 
 <meta name="author" content="smilerfu" />
-  <meta name="description" content="
-" />
-<meta name="keywords" content="Cocos2dX, Babelua" />
-
+  <meta name="description" content="smilerfu&#39;s blogs." />
+  <meta name="keywords" content="Hugo, theme, jane" />
 
 
 
@@ -39,7 +37,9 @@
 <meta name="generator" content="Hugo 0.38" />
 
 
-<link rel="canonical" href="http://smilerfu.github.io/post/cocos2d-x-lua-&#43;-cocosforwin3/" />
+<link rel="canonical" href="http://smilerfu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
+<link href="http://smilerfu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="alternate" type="application/rss+xml" title="smilerfu&#39;s blogs" />
+  <link href="http://smilerfu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="feed" type="application/rss+xml" title="smilerfu&#39;s blogs" />
 
 
 
@@ -59,16 +59,14 @@
 
 
 
-<meta property="og:title" content="Cocos2d-x Lua &#43; CocosForWin3.10 &#43; BabelLua项目设置" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://smilerfu.github.io/post/cocos2d-x-lua-&#43;-cocosforwin3/" />
+<meta property="og:title" content="机器学习" />
+<meta property="og:description" content="smilerfu&#39;s blogs." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://smilerfu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
 
 
 
-<meta property="article:published_time" content="2018-05-13T14:59:45&#43;08:00"/>
-
-<meta property="article:modified_time" content="2018-05-13T14:59:45&#43;08:00"/>
+<meta property="og:updated_time" content="2019-01-16T01:39:00&#43;08:00"/>
 
 
 
@@ -79,21 +77,12 @@
 
 
 
+<meta itemprop="name" content="机器学习">
+<meta itemprop="description" content="smilerfu&#39;s blogs.">
 
-<meta itemprop="name" content="Cocos2d-x Lua &#43; CocosForWin3.10 &#43; BabelLua项目设置">
-<meta itemprop="description" content="">
-
-
-<meta itemprop="datePublished" content="2018-05-13T14:59:45&#43;08:00" />
-<meta itemprop="dateModified" content="2018-05-13T14:59:45&#43;08:00" />
-<meta itemprop="wordCount" content="816">
-
-
-
-<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Cocos2d-x Lua &#43; CocosForWin3.10 &#43; BabelLua项目设置"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="机器学习"/>
+<meta name="twitter:description" content="smilerfu&#39;s blogs."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -165,116 +154,55 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          <article class="post bg-white">
+          
+
+<section id="archive" class="archive">
+  
     
-    <header class="post-header">
-      <h1 class="post-title">Cocos2d-x Lua &#43; CocosForWin3.10 &#43; BabelLua项目设置</h1>
-      
-      <div class="post-meta">
-        <span class="post-time"> 2018-05-13 </span>
-        <div class="post-category">
-            
-              <a href="/categories/cocos2dx/"> Cocos2dX </a>
-            
-              <a href="/categories/babelua/"> Babelua </a>
-            
-          </div>
-        <span class="more-meta"> 816 words </span>
-        <span class="more-meta"> 2 min read </span>
+      <div class="archive-title category">
+        <h2 class="archive-name">Category: 机器学习</h2>
       </div>
-    </header>
-
     
-    
+  
 
-    
-    <div class="post-content">
-      <p></p>
-
-<h4 id="项目环境">项目环境</h4>
-
-<ul>
-<li>cocos2d-x-3.16</li>
-<li>VS2013</li>
-<li>CocosForWin-v3.10.exe</li>
-<li>BabeLua+For+2013+V3.2.2.0.vsix</li>
-</ul>
-
-<h4 id="创建项目">创建项目</h4>
-
-<h6 id="新建cocos2d-x-lua项目">新建Cocos2d-x lua项目</h6>
-
-<ul>
-<li><p>切换到<code>cocos2d-x-3.16\tools\cocos2d-console\bin</code>目录，执行:</p>
-
-<pre><code>cocos new MyLuaGame -l lua -p com.xxx.xxx -d F:\cocosproject
-</code></pre></li>
-
-<li><p>编译项目</p></li>
-</ul>
-
-<h6 id="新建-cocostudio项目">新建 Cocostudio项目</h6>
-
-<ul>
-<li>打开Cocostudio，选择【文件】，选择【新建项目】，我们这里新建项目名称为 CocosProject
-<img src="/images/cocos2dx/cocostudio_new_project.png" alt="" /></li>
-<li>由于我们只用来编辑资源，因此可以删除CocosProject目录底下以下目录和文件:framework、src、res、.project、config.json和.cocos-project.json</li>
-<li>修改<code>CocosProject.cfg</code>文件中的<code>CreateFrameworkVersion Value=&quot;cocos2d-x-3.16&quot;</code>和<code>CurrentFrameworkVersion Value=&quot;cocos2d-x-3.16</code>，目前不清楚此修改是否有作用</li>
-<li>使用Cocostudio打开项目，选择<code>F:\cocosproject\MyLuaGame\CocosProject\CocosProject.ccs</code>打开即可。</li>
-
-<li><p>修改cocostudio项目设置的资源导出目录</p>
-
-<p><img src="/images/cocos2dx/cocostudio_project_settings.png" alt="" /></p>
-
-<p><img src="/images/cocos2dx/cocostudio_project_settings_pack.png" alt="" /></p></li>
-</ul>
-
-<h6 id="新加-lua项目">新加 lua项目</h6>
-
-<ul>
-<li>右键解决方案，添加并新建Lua项目
-<img src="/images/cocos2dx/solution_add_lua_project.png" alt="" /></li>
-<li>Lua项目路径设置为项目MyLuaGame的根路径
-<img src="/images/cocos2dx/lua_project_new.png" alt="" /></li>
-<li>右键Lua项目，选择添加现有目录，将F:\cocosproject\MyLuaGame\src目录添加入
-<img src="/images/cocos2dx/lua_project_add_existing_folder.png" alt="" /></li>
-<li>右键LuaProject，选择属性，设置Lua exe path为<code>$(SolutionDir)../../simulator/win32/MyLuaGame.exe</code>和Working path为<code>$(SolutionDir)../../</code>
-<img src="/images/cocos2dx/lua_project_set_path.png" alt="" /></li>
-<li>设置LuaProject为启动项目</li>
-<li>此时添加断点发现并不能中断，修改AppDelegate.cpp文件，添加<code>LuaStack* stack = engine-&gt;getLuaStack();stack-&gt;addSearchPath(&quot;src/&quot;);</code>
-<img src="/images/cocos2dx/lua_project_debug_appdelegate.png" alt="" /></li>
-<li>设置MyLuaGame为启动项目，重新编译运行后，再设置LuaProject为启动项目，此时可以进入断点
-<br /></li>
-</ul>
+  
+    <div class="archive-post">
+      <span class="archive-post-time">
+        2019-01-16
+      </span>
+      <span class="archive-post-title">
+        <a href="/post/ml_linear_regression/" class="archive-post-link">
+          线性回归
+        </a>
+      </span>
     </div>
+  
+</section>
 
-    
-    
 
-    
-    
 
-    <footer class="post-footer">
-      
 
-      
-      <nav class="post-nav">
-        
-          <a class="prev" href="/post/ml_linear_regression/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">线性回归</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        
-          <a class="next" href="/post/%E7%BD%91%E7%BB%9C_%E5%AD%A6%E4%B9%A0_%E7%AC%94%E8%AE%B0/">
-            <span class="next-text nav-default">网络 学习笔记</span>
-            <span class="prev-text nav-mobile">Next</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-    
-  </article>
+
+
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
         </div>
       </div>
     </main>

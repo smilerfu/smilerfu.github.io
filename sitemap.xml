@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://smilerfu.github.io/post/ml_linear_regression/</loc>
+    <lastmod>2019-01-16T01:39:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://smilerfu.github.io/post/cocos2d-x-lua-&#43;-cocosforwin3/</loc>
     <lastmod>2018-05-13T14:59:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -179,7 +186,7 @@
   
   <url>
     <loc>http://smilerfu.github.io/post/</loc>
-    <lastmod>2018-05-13T14:59:45+08:00</lastmod>
+    <lastmod>2019-01-16T01:39:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -207,7 +214,14 @@
   
   <url>
     <loc>http://smilerfu.github.io/</loc>
-    <lastmod>2018-05-13T14:59:45+08:00</lastmod>
+    <lastmod>2019-01-16T01:39:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://smilerfu.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2019-01-16T01:39:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
